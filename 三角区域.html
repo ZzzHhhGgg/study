@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS实现三角区域</title>
+	<style>
+	* {
+		margin: 0;
+		padding: 0;
+	}
+	.father {
+		display: none;
+		position: relative;
+		margin: 100px auto;
+		width: 200px;
+		height: 200px;
+		background-color: pink;
+	}
+	.son {
+		position: absolute;
+		left: 50%;
+		margin-left: -5px;
+		margin-top: -20px;
+		width: 0;
+		line-height: 0;
+		font-size: 0;
+		/*border-top: 10px solid transparent ;
+		border-right: 10px solid transparent ;
+		border-bottom: 10px solid red;
+		border-left: 10px solid transparent ;*/
+		border-width: 10px 10px 10px 10px;
+		border-style: solid solid solid solid;
+		border-color: transparent transparent pink transparent;
+	}
+	button:hover +.father{
+		display: block;
+	}
+    </style>
+</head>
+<body>
+	<button>按钮</button>
+	<div class="father">
+		<div class="son"></div>
+	</div>
+</body>
+</html>
